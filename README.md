@@ -10,8 +10,10 @@ Une application web qui calcule la moyenne des notes d'un étudiant, et qui enre
     - calculer la moyenne et le résultat
     - enregistrer
 
-### Stack technique:
+### Stack technique
 - Langage: **Python** 3.14
 - Modules principaux: **Flask** et **Flask-SQLAlchemy**
 - HTML
 
+### Lien clickable
+- https://etiennedesautels000-portfolio-1.onrender.com
