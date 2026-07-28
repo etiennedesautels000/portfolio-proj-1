@@ -35,6 +35,13 @@ def init_db():
     '''
     db.create_all()
 
+def drop_db():
+    '''
+    Suppression et création de la table
+    '''
+    db.drop_all()
+    init_db()
+
 def enregistrer_etudiant(etudiant):
     '''
     Insertion (INSERT) d'un enregistrement à la bd

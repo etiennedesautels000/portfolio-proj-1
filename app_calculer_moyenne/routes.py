@@ -6,6 +6,7 @@ from werkzeug.utils import redirect
 from app_calculer_moyenne.form_fields import Form_Fields
 from app_calculer_moyenne.modele.mod_classes import Etudiant, Resultats
 from app_calculer_moyenne.dao.mod_dao import enregistrer_etudiant, exist_etudiant, lister_etudiants
+from app_calculer_moyenne.dao.mod_dao import drop_db
 from app_calculer_moyenne.settings import app
 
 
@@ -23,7 +24,7 @@ def index():
 
 # Route secondaire
 # Formulaire de saisie des données des étudiants
-@app.route("/formulaire" , methods=['GET', 'POST'])
+@app.route("/formulaire", methods=['GET', 'POST'])
 def formulaire():
     form_obj = Form_Fields()
 
@@ -70,5 +71,9 @@ def formulaire():
 
     return render_template('form.html', title='Formulaire de calcul de notes', form=form_obj)
 
-
+@app.route('/reset-db', methods=['GET'])
+def reset_db():
+    with app.app_context():  # ré-initialisation de la bdd
+        drop_db()
+    return "Database reset successfully!"
 
