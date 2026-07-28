@@ -1,0 +1,20 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python Bytecode & Cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs and OS garbage
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local SQLite Database
+instance/
+*.db
+*.sqlite3

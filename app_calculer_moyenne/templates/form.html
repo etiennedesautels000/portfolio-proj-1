@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Formulaire de saisie</h1>
+
+<form action="" method="POST">
+    {{ form.hidden_tag() }}
+    <hr>
+    <p>
+        {{ form.id_etudiant.label }}
+        {{ form.id_etudiant(size=16, type="number", min="1", required=True) }}
+    </p>
+    <p>
+        {{ form.nom.label }}
+        {{ form.nom(size=16, pattern="[A-Za-zÀ-ÿ\s]+", required=True) }}
+    </p>
+    <p>
+        {{ form.examen_intra.label }}
+        {{ form.examen_intra(size=16, type="number", min="0", max="100", step="0.01", required=True) }}
+    </p>
+    <p>
+        {{ form.examen_final.label }}
+        {{ form.examen_final(size=16, type="number", min="0", max="100", step="0.01", required=True) }}
+    </p>
+    <p>
+        {{ form.projet_session.label }}
+        {{ form.projet_session(size=16, type="number", min="0", max="100", step="0.01", required=True) }}
+    </p>
+    <p>
+        {{ form.effacer(class_="lightgray", formnovalidate=True) }}
+    </p>
+
+    <hr>
+
+    <p>
+        {{ form.moyenne.label }}
+        {{ form.moyenne(size=16, readonly=true, class_="lightgray") }}
+    </p>
+    <p id="champ-resultat">
+        {{ form.resultat.label }}
+        {{ form.resultat(size=16, readonly=true, class_="lightgray") }}
+    </p>
+    <p>
+        {{ form.calculer(class_="lightgray") }}
+    </p>
+
+    <hr>
+
+    <p>
+        {{ form.enregistrer(class_="lightgray") }}
+        {{ form.quitter(class_="lightgray", formnovalidate=True) }}
+    </p>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</form>
+{% endblock %}

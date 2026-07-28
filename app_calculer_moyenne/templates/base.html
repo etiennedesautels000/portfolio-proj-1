@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        input, button { font-family: inherit; font-size: inherit; }
+
+        #champ-resultat input[value="Réussi"] {
+            color: green;
+            font-weight: bold;
+        }
+
+        #champ-resultat input[value="Échec"] {
+            color: red;
+            font-weight: bold;
+        }
+
+        .lightgray { background-color: #E8E8E8; }
+
+        table { border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 5px; }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="/index">Liste des étudiants</a> &nbsp
+        <a href="/formulaire">Formulaire de calcul</a>
+    </div>
+    <hr>
+
+    {% block content %} {% endblock %}
+</body>
+</html>
