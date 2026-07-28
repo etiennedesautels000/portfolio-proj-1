@@ -12,5 +12,6 @@ Une application web qui calcule la moyenne des notes d'un étudiant, et qui enre
 
 ### Stack technique:
 - Langage: **Python** 3.14
-- Modules principaux: **flask** et **sqlalchemy**.
+- Modules principaux: **Flask** et **Flask-SQLAlchemy**
+- HTML
 
