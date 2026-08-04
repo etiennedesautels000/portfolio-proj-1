@@ -16,5 +16,5 @@ Une application web qui calcule la moyenne des notes d'un étudiant, et qui enre
 - HTML
 
 ### Démo en ligne
-- https://etiennedesautels000-portfolio-notes.onrender.com
+- https://etiennedesautels000-portfolio-notesetudiant.onrender.com
 
