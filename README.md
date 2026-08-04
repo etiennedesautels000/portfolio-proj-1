@@ -1,4 +1,4 @@
-# Portfolio Projet 1
+# Portfolio Projet : Notes-Étudiant
 
 Une application web qui calcule la moyenne des notes d'un étudiant, et qui enregistre les informations.
 
@@ -15,5 +15,6 @@ Une application web qui calcule la moyenne des notes d'un étudiant, et qui enre
 - Modules principaux: **Flask** et **Flask-SQLAlchemy**
 - HTML
 
-### Lien clickable
-- https://etiennedesautels000-portfolio-1.onrender.com
+### Démo en ligne
+- https://etiennedesautels000-portfolio-notes.onrender.com
+
